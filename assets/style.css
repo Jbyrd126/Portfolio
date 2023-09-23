@@ -41,10 +41,11 @@ main {
   flex-wrap: wrap;
   margin-top: 2%;
 }
-.hero {position: relative;
+.hero {
+  position: relative;
   margin: 0;
   height: 300px;
-  padding: 20px;
+  
   display: flex;
   border: 2px color black;
   background-color:whitesmoke;
@@ -103,3 +104,6 @@ span:after {
     top: 110px;
     width: 75px; 
 }
+img{image-resolution: 300dpi;
+  height: auto;
+  width:100%;}
