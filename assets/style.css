@@ -31,29 +31,59 @@ h1{
   text-align: left;
   display: flex;
   justify-content: center;
+  
+}
+h1:hover {
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  color: rgb(53, 53, 190);
+
 }
 
-nav a{
+h2:hover {
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  color: rgb(53, 53, 190);
+
+}
+
+
+
+header a {
+  /* text-align: center; */
+  /* padding-bottom: 2%; */
+  text-decoration: none; 
+  /* border-bottom:2px solid red; */
+  flex-wrap: wrap;
   font-family: Arial, Helvetica, sans-serif;
-  padding-right: 60px;
+  padding-right: 75px;
   justify-content: center;
+  align-content: space-between;
   color: #88c5c7;
-  text-decoration: none;
-  display: flex-row;}
+  display: inline-flex;
+  cursor: pointer;
+}
+
+
 
 main {
+  display: flex;
+  flex: 100%;
+  justify-content: flex-start;
+  flex-direction: column;
   flex-wrap: wrap;
   margin-top: 2%;
 }
 .hero {
+  flex-wrap: wrap;
   position: relative;
   margin: 0;
-  height: 1200px;
+  height: 1000px;
   background-image:url(./images/dark-blue-wooden-wall-texture.jpg) ;
   display: flex;
-  border: 2px color black;
+  /* border: 200px color black; */
   background-color:whitesmoke;
-  background-size: cover;
+  background-size: auto;
 }
 h2{
   font-size:xx-large;
@@ -67,29 +97,14 @@ h2{
   background-color:var(--lightblue);
   color: var(--blackishgrey);
 }
-.headings{text-align: right;
-  font-size: 75%;
-  position: relative;
-  margin: 0;
-  height: 400px;
-  padding: 20px;
-  display: flex;
-  border:5px;
-  background-color: whitesmoke;
-  justify-content: flex-end;
-}
+
+
 h3 {
+  display:flex;
   padding-left: 60px;
   text-align: right;
-  /* justify-content: flex-start; */
+  justify-content: center;
   font-size: 300%;
-  display: flex;
-  flex-wrap: wrap-reverse; 
-  /* align-items:flex-end; */
-  /* padding: 20px;
-  top: 0px;
-  left: 0px; */
-  height: 50px;
   color: var(--blackishgrey);}
   
 
@@ -97,39 +112,113 @@ aside{
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  /* justify-content: flex-start; */
-  width: 25%;
-  padding: 5px;
-  margin: 5px;
-  /* float: left; */
+  justify-content: flex-start;
+  flex: 20%;
+  padding: 15px;
+  margin: 15px;
+  float: left;
   border-right: solid 3px #445876;
 
 }
 .section1 {
-  size: 25%;
+  flex: 80%;
   display: flex;
   flex-direction:row;
-  /* justify-content: space-between; */
+  justify-content: space-between;
   align-items: stretch;
   padding: 10px;
   margin: 25px;
 
 }
- p{
+ .AboutMe{
+  
+  flex: 100%;
+  flex-wrap: wrap;
   display: flex;
   font-family: verdana;
-  font-size: 12px;
+  font-size: 20px;
   color: #3f5a7b;
-  /* padding: 10px 10px 10px 10px; */
+  padding: 10px 10px 10px 10px;
   margin: 10px;}
 
-  .section2 {
-    size: 25%;
+  .wholebox {
+    padding: 15px;
+    margin: 10px;
+    height: 600px;
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    display: flex;
+
+  }
+
+  .bigger
+  {
+    position: relative;
+    margin: 10px;
+    padding: 15px;
+    height: 50%; 
+    border: solid 5px;
+    border-color:var(--lightblue);
+    flex: 100%;
+    background-color: whitesmoke;
+
+  }
+
+  .smaller
+  {
+    position: relative;
+    margin: 10px;
+    padding: 15px;
+    height: 25%; 
+    border: solid 5px; 
+    border-color:var(--lightblue);
+    flex: 40%;
+    background-color: whitesmoke;
+
+  }
+
+  .navb {
+    display: flex;
+    flex-direction: row;
+    flex: 100%;
+    list-style: none;
+    justify-content: space-around;
+    padding: 50px;
+    margin: 50px;
+
+  }
+  
+  .navb ul {
+    justify-content: space-around;
+    flex: 100%;
     display: flex;
     flex-direction:row;
-    /* justify-content: space-between; */
-    align-items: stretch;
-    padding: 10px;
-    margin: 25px;
+}
+
+.navb li {
+
+  padding: 50px;
+  font-size: 50px;
+  color: var(--blackishgrey);
+  display: inline-block;
+}
+
+.navb a {
   
-  }
+  color: var(--blackishgrey);
+}
+
+
+  
+  
+
+  /* @media screen and (max-width: 992px) {
+    .main-header {
+      display: flex;
+      background: #772014;
+      flex-wrap: wrap;
+      justify-content: center;
+      
+    }
+  } */
