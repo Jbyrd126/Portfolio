@@ -5,7 +5,7 @@
 
 - 🤝 I’m looking for help with **everything!**
 
-- 👨‍💻 All of my projects are available at [https://jbyrd126.github.io/Homework1/](https://jbyrd126.github.io/Homework1/)
+- 👨‍💻 All of my projects are available at [https://jbyrd126.github.io/Portfolio/](https://jbyrd126.github.io/Portfolio/)
 
 - 📫 How to reach me **Glurk33@gmail.com**
 
