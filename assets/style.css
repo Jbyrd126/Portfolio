@@ -1,6 +1,7 @@
 :root {
   --lightblue: #88c5c7;
   --blackishgrey: #2b2e35;
+  --navyblue: #445877;
 }
 * {
   box-sizing: border-box;
@@ -16,6 +17,19 @@ body {
   font-size: 30px;
   align-items: center;
   display: flex;
+  height: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px 0px;
+  background: var(--blackishgrey);
+  color: #fff;
+}
+
+nava {
+  margin: 0px;
+  font-size: 30px;
+  align-items: center;
+  display: flex;
   height: 150px;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -26,11 +40,8 @@ body {
 
 main {
   display: flex;
-  flex: 100%;
-  justify-content: flex-start;
   flex-direction: column;
-  flex-wrap: wrap;
-  margin-top: 2%;
+  height: auto;
 }
 
 h1 {
@@ -68,7 +79,7 @@ header a {
   display: inline-flex;
   cursor: pointer;
 }
-nava:hover {
+nava a:hover {
   transition: all 0.3s ease 0s;
   cursor: pointer;
   color: solid red;
@@ -78,7 +89,7 @@ nava:hover {
   flex-wrap: wrap;
   position: relative;
   margin: 0;
-  height: 1100px;
+  height: 700px;
   background-image: url(./images/dark-blue-wooden-wall-texture.jpg);
   display: flex;
   border: 200px color black;
@@ -87,7 +98,7 @@ nava:hover {
 }
 h2 {
   font-family: Arial, Helvetica, sans-serif;
-  color: #2b2e35;
+
   font-size: xx-large;
   display: flex;
   align-items: center;
@@ -109,7 +120,7 @@ h3 {
   font-size: 600%;
   color: var(--blackishgrey);
   font-family: Arial, Helvetica, sans-serif;
-  color: #2b2e35;
+  color: var(--navyblue);
 }
 
 aside {
@@ -122,18 +133,23 @@ aside {
   padding: 5px;
   margin: 15px;
   float: left;
-  border-right: solid 5px #445876;
+  border-right: solid 5px var(--navyblue);
 }
 .section1 {
-  flex: 80%;
+  flex: 0 0 80%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: stretch;
   padding: 10px;
   margin: 25px;
+  display: flex;
+  margin-bottom: 40px;
+  margin-left: 50px;
+  margin-right: 50px;
 }
-.section1 p {
+.right {
+  width: 100%;
   flex: 100%;
   flex-wrap: wrap;
   display: flex;
@@ -143,6 +159,10 @@ aside {
   color: #3f5a7b;
   padding: 10px 10px 10px 10px;
   margin: 10px;
+  font-size: 20px;
+  line-height: 200%;
+  margin: 0;
+  margin-bottom: 20px;
 }
 
 .wholebox {
@@ -205,12 +225,59 @@ aside {
   color: var(--blackishgrey);
 }
 
-/* @media screen and (max-width: 992px) {
-    .main-header {
-      display: flex;
-      background: #772014;
-      flex-wrap: wrap;
-      justify-content: center;
-      
-    }
-  } */
+@media screen and (max-width: 980px) {
+  .main-header {
+    text-decoration: none;
+    height: 100%;
+    padding-left: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  h1 {
+    flex-direction: column;
+  }
+
+  header a {
+    border-bottom: 0px;
+  }
+  .section1 {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .section1 aside h2 p {
+    flex-direction: column;
+    justify-content: center;
+    max-width: 100%;
+    margin: 15px 0px;
+    border-right: 0px solid var(--lightblue);
+    text-align: center;
+    padding-right: 0px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main-header nava {
+    height: 100%;
+    padding-left: 50px;
+    display: flex;
+    flex-direction: column;
+    background: var(--blackishgrey);
+    flex-wrap: wrap;
+    justify-content: center;
+    border-bottom: 0px;
+  }
+  .section1 h3 {
+    width: 100%;
+    text-align: center;
+    align-self: flex-start;
+    margin: 3px;
+    padding: 0px;
+  }
+  aside {
+    max-width: 100%;
+    border: 0;
+  }
+}
