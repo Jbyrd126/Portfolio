@@ -51,11 +51,11 @@ main {
 }
 
 h1 {
+  font-size: 75px;
   font-family: var(--bigtext);
-  /* font-family: Arial, Helvetica, sans-serif; */
   color: #2b2e35;
   background-color: var(--lightblue);
-  padding: 4px 10px 4px 40px;
+  padding: 5px 40px 6px 40px;
   text-align: left;
   display: flex;
   justify-content: center;
@@ -120,6 +120,7 @@ h3 {
   display: flex;
   padding-left: 60px;
   padding-right: 5px;
+  padding-bottom: 10px;
   text-align: right;
   justify-content: end;
   font-size: 600%;
@@ -132,23 +133,23 @@ aside {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content: flex-end;
+  justify-content: flex-start;
   max-width: 450px;
   min-width: 450px;
+  height: 505px;
   padding: 5px;
   margin: 15px;
   float: left;
   border-right: solid 5px var(--navyblue);
 }
 .section1 {
-  flex: 0 0 80%;
+  /* flex: 0 0 80%; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
   padding: 10px;
-  margin: 25px;
-  display: flex;
+  margin: 10px;
   margin-bottom: 40px;
   margin-left: 50px;
   margin-right: 50px;
@@ -171,20 +172,6 @@ aside {
   margin-bottom: 20px;
 }
 
-content {
-  flex: 0 0 80%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: stretch;
-  padding: 10px;
-  margin: 25px;
-  display: flex;
-  margin-bottom: 40px;
-  margin-left: 50px;
-  margin-right: 50px;
-}
-
 .wholebox {
   border-color: var(--lightblue);
   border: 5px;
@@ -196,23 +183,27 @@ content {
   flex-direction: row;
   display: flex;
 }
+
+/*tag for img boxes*/
 bigtag {
+  justify-content: space-around;
   font-family: var(--littletext);
   font-weight: 100;
   font-size: 35px;
-  /* display: flex; */
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding-left: 30px;
+  padding: 20px;
   position: absolute;
   bottom: 50px;
   left: 0px;
-  height: 100px;
+  height: 110px;
   width: 300px;
   background-color: var(--lightblue);
   color: var(--blackishgrey);
 }
 
+/*to shrink some text*/
 span {
   font-size: 75%;
   font-weight: lighter;
@@ -223,9 +214,10 @@ span {
   flex-direction: column;
 }
 
+/*controlling how the image is displayed on the boxes*/
 .Project {
   background-size: cover;
-  background-image: url("./images/felicia-d-ascanio-qvKqFulTwdg-unsplash.jpg");
+  background-image: url("./images/01-html-css-git-homework-demo.png");
   position: relative;
   margin: 10px;
   padding: 15px;
@@ -235,6 +227,23 @@ span {
   flex: 40%;
   background-color: whitesmoke;
 }
+
+#led {
+  background-image: url("./images/dark-blue-wooden-wall-texture.jpg");
+}
+
+#calc {
+  background-image: url("./images/dark-blue-wooden-wall-texture.jpg");
+}
+
+#puzzles {
+  background-image: url("./images/dark-blue-wooden-wall-texture.jpg");
+}
+
+#run {
+  background-image: url("./images/dark-blue-wooden-wall-texture.jpg");
+}
+
 .bigger {
   height: 500px;
   flex: 100%;
@@ -287,6 +296,7 @@ footer {
 
 @media screen and (max-width: 980px) {
   .main-header {
+    /* background-color: red; */
     text-decoration: none;
     height: 100%;
     padding-left: 50px;
@@ -307,7 +317,7 @@ footer {
     flex-direction: column;
     justify-content: center;
   }
-  .section1 aside h2 p {
+  .section1 aside h3 p {
     flex-direction: column;
     justify-content: center;
     max-width: 100%;
@@ -320,16 +330,19 @@ footer {
 
 @media screen and (max-width: 768px) {
   .main-header nava {
-    height: 100%;
+    /* background-color: black; */
+    text-decoration: none;
+    /* height: 100%; */
     padding-left: 50px;
     display: flex;
     flex-direction: column;
-    background: var(--blackishgrey);
     flex-wrap: wrap;
     justify-content: center;
-    border-bottom: 0px;
+    align-items: center;
   }
   .section1 h3 {
+    flex-direction: column;
+    display: flex;
     width: 100%;
     text-align: center;
     align-self: flex-start;
