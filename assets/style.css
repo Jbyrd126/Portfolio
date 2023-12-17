@@ -12,6 +12,9 @@ html {
 }
 
 * {
+  margin: 0;
+  padding: 0;
+  font-family: var(--littletext);
   box-sizing: border-box;
 }
 
@@ -30,7 +33,7 @@ body {
   height: 100%;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 20px 0px;
+  padding: 10px 20px;
   background: var(--blackishgrey);
   color: #fff;
 }
@@ -46,24 +49,47 @@ nava {
   justify-content: space-between;
   padding: 6px 20px;
   color: #fff;
-  transition: .5s;
+  transition: 0.5s;
+}
+
+nava:hover a {
+
+  color: var(--lightblue);
+  transform: scale(1.5);
+  opacity: 0.2;
+  filter: blur(5px);
+  border-radius: 15px;
+
 }
 
 nava a:hover {
-  transition: all 0.3s ease 0.3s;
-  color: red;
+  transform: scale(2);
+  opacity: 1;
+  filter: blur(0);
+  text-decoration: none;
+  color: var(--blackishgrey);
+  border-radius: 15px;
 }
 
-.animate {
+nava a:before {
+  content: '';
   position: absolute;
-  background-color: brown;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: blueviolet;
+  background: var(--lightblue);
+  transition: 0.5s;
+  transform-origin: right;
+  transform: scaleX(0);
   z-index: -1;
-  border-bottom: 2px solid var(--lightblue);
+  border-radius: 10px;
+}
+
+nava a:hover:before {
+  transition: transform 0.5s;
+  transform-origin: left;
+  transform: scaleX(3);
 }
 
 main {
@@ -81,6 +107,7 @@ h1 {
   text-align: left;
   display: flex;
   justify-content: center;
+  border-radius: 15px;
 }
 
 h1:hover {
@@ -88,6 +115,8 @@ h1:hover {
   cursor: pointer;
   color: rgb(53, 53, 190);
   box-shadow: 15px 30px 50px rgb(53, 53, 190);
+  border-radius: 15px;
+
 }
 
 h2:hover {
@@ -95,10 +124,10 @@ h2:hover {
   cursor: pointer;
   color: rgb(53, 53, 190);
   box-shadow: 15px 30px 50px rgb(53, 53, 190);
-
 }
 
-header a {
+header,
+a {
   margin-right: 75px;
   text-align: center;
   padding: 6px 20px;
@@ -110,7 +139,6 @@ header a {
   display: inline-flex;
   cursor: pointer;
 }
-
 
 .hero {
   flex-wrap: wrap;
@@ -136,6 +164,7 @@ h2 {
   height: 75px;
   background-color: var(--lightblue);
   color: var(--blackishgrey);
+  border-radius: 15px;
 }
 
 h3 {
@@ -209,20 +238,22 @@ aside {
 bigtag {
   justify-content: space-around;
   font-family: var(--littletext);
+  flex-shrink: 1 0 0 300px;
   font-weight: 100;
   font-size: 35px;
-  flex-grow: 0 1 300px;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   align-items: flex-start;
   padding: 20px;
   position: absolute;
   bottom: 50px;
   left: 0px;
-  height: 110px;
+
   width: 300px;
   background-color: var(--lightblue);
   color: var(--blackishgrey);
+
 }
 
 /*to shrink some text*/
@@ -296,7 +327,7 @@ footer {
 .navb {
   width: 80%;
   justify-content: space-around;
-  margin-left: 475px;
+  margin-left: 510px;
   display: flex;
   flex-wrap: wrap;
   padding: 10px 10px;
@@ -307,7 +338,6 @@ footer {
   text-decoration: none;
   font-family: var(--littletext);
   color: var(--blackishgrey);
-
 }
 
 .contact {
@@ -326,12 +356,47 @@ footer {
   border-bottom: 5px solid var(--navyblue);
 }
 
+@media screen and (max-width: 1410px) {
+  .main-header {
+    background-color: red;
+  }
+
+  h1 {
+    flex-direction: column;
+    padding: 15px;
+    margin-bottom: 50px;
+  }
+
+  .navb {
+    width: 80%;
+    justify-content: space-around;
+    margin-left: 510px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 10px;
+  }
+
+}
+
+@media screen and (max-width: 1150px) {
+  .navb {
+    width: 80%;
+    justify-content: space-around;
+    margin-left: 610px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 10px;
+  }
+}
+
+
+
 @media screen and (max-width: 980px) {
   .main-header {
-    /* background-color: red; */
+    background-color: purple;
     text-decoration: none;
     height: 100%;
-    padding-left: 50px;
+    padding: 50px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -340,6 +405,8 @@ footer {
 
   h1 {
     flex-direction: column;
+    padding: 15px;
+    margin-bottom: 50px;
   }
 
   header a {
@@ -381,11 +448,24 @@ footer {
   h3 {
     padding-left: 0;
   }
+
+  .navb {
+    width: 80%;
+    justify-content: space-around;
+    margin-left: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 10px;
+  }
+
+  bigtag {
+    width: 300px
+  }
 }
 
 @media screen and (max-width: 768px) {
-  .main-header nava {
-    /* background-color: black; */
+  .main-header {
+    background-color: black;
     text-decoration: none;
     /* height: 100%; */
     padding-left: 50px;
@@ -417,5 +497,10 @@ footer {
     align-items: flex-start;
     flex-direction: column;
     margin-left: 0;
+  }
+
+  bigtag {
+    width: 290px;
+
   }
 }
