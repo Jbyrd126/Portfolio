@@ -38,30 +38,12 @@ body {
   color: #fff;
 }
 
-/* header.main-header>nava>a {
-  position: relative;
-  font-family: var(--littletext);
-  font-size: 30px;
-  text-decoration: none;
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 6px 20px;
-  color: #fff;
-  transition: 0.5s;
-
-} */
-
 .main-header>nava:hover a {
-
   color: var(--lightblue);
   transform: scale(1.5);
   opacity: 0;
   filter: blur(25px);
   border-radius: 5px;
-
-
 }
 
 header.main-header>nava>a:hover {
@@ -71,11 +53,10 @@ header.main-header>nava>a:hover {
   text-decoration: none;
   color: var(--blackishgrey);
   border-radius: 5px;
-
 }
 
 header.main-header>nava>a:before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -119,7 +100,6 @@ h1:hover {
   color: rgb(53, 53, 190);
   box-shadow: 15px 30px 50px rgb(53, 53, 190);
   border-radius: 15px;
-
 }
 
 h2:hover {
@@ -128,7 +108,6 @@ h2:hover {
   color: rgb(53, 53, 190);
   box-shadow: 15px 30px 50px rgb(53, 53, 190);
 }
-
 
 header.main-header>nava>a {
   margin-right: 75px;
@@ -143,6 +122,8 @@ header.main-header>nava>a {
   cursor: pointer;
   transition: 0.5s;
 }
+
+/* giant image below header */
 
 .hero {
   flex-wrap: wrap;
@@ -210,13 +191,14 @@ aside {
   margin-right: 50px;
 }
 
+/* control the paragraphs in the about me section */
+
 .right {
   width: 100%;
   flex: 100%;
   flex-wrap: wrap;
   display: flex;
   font-family: var(--bigtext);
-
   font-size: 26px;
   color: #3f5a7b;
   padding: 10px 10px 10px 10px;
@@ -236,7 +218,6 @@ aside {
   flex-wrap: wrap;
   flex-direction: row;
   display: flex;
-
 }
 
 /*tag for img boxes*/
@@ -253,14 +234,12 @@ bigtag {
   position: absolute;
   bottom: 50px;
   left: 0px;
-
-  /* width: 300px; */
   background-color: var(--lightblue);
   color: var(--blackishgrey);
-
 }
 
 /*to shrink some text*/
+
 span {
   font-size: 75%;
   font-weight: lighter;
@@ -278,6 +257,7 @@ span {
 }
 
 /*controlling how the image is displayed on the boxes*/
+
 .Project {
   background-size: cover;
   background-image: url("./images/01-html-css-git-homework-demo.png");
@@ -298,9 +278,13 @@ span {
   border-radius: 25px;
 }
 
+/* before hover opacity on cards in work section */
+
 .Project:hover {
   opacity: 100%;
 }
+
+/* background images for work section */
 
 #led {
   background-image: url("./images/dark-blue-wooden-wall-texture.jpg");
@@ -317,6 +301,8 @@ span {
 #run {
   background-image: url("./images/dark-blue-wooden-wall-texture.jpg");
 }
+
+/* used this to make first box in work section bigger than rest */
 
 .bigger {
   height: 500px;
@@ -355,16 +341,12 @@ footer {
   color: var(--blackishgrey);
 }
 
-
-
 .navb:hover a {
-
   color: var(--lightblue);
   transform: scale(2);
   opacity: 0;
   filter: blur(25px);
   border-radius: 5px;
-
 }
 
 .navb a:hover {
@@ -377,7 +359,7 @@ footer {
 }
 
 .navb a:before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0px;
   left: -5px;
@@ -427,8 +409,6 @@ footer {
 }
 
 @media screen and (max-width: 1410px) {
-
-
   h1 {
     flex-direction: column;
     padding: 15px;
@@ -443,7 +423,6 @@ footer {
     flex-wrap: wrap;
     padding: 10px 10px;
   }
-
 }
 
 @media screen and (max-width: 1150px) {
@@ -457,11 +436,8 @@ footer {
   }
 }
 
-
-
 @media screen and (max-width: 980px) {
   .main-header {
-
     text-decoration: none;
     height: 100%;
     padding: 50px;
@@ -527,13 +503,12 @@ footer {
   }
 
   bigtag {
-    width: 300px
+    width: 300px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .main-header {
-
     text-decoration: none;
     /* height: 100%; */
     padding-left: 50px;
@@ -569,6 +544,5 @@ footer {
 
   bigtag {
     width: 290px;
-
   }
 }
