@@ -243,7 +243,6 @@ aside {
 bigtag {
   justify-content: space-around;
   font-family: var(--littletext);
-  flex-shrink: 1 0 0 300px;
   font-weight: 100;
   font-size: 35px;
   display: flex;
@@ -255,7 +254,7 @@ bigtag {
   bottom: 50px;
   left: 0px;
 
-  width: 300px;
+  /* width: 300px; */
   background-color: var(--lightblue);
   color: var(--blackishgrey);
 
@@ -337,6 +336,8 @@ footer {
   display: inline-flex;
 }
 
+/* bottom nav styling and animation */
+
 .navb {
   width: 80%;
   justify-content: space-around;
@@ -379,12 +380,12 @@ footer {
   content: '';
   position: absolute;
   top: 0px;
-  left: 40px;
-  width: 45%;
-  height: 40px;
+  left: -5px;
+  width: 35%;
+  height: 45px;
   background: var(--lightblue);
   transition: 0.5s;
-  transform-origin: bottom;
+  transform-origin: left;
   transform: scaleX(2);
   z-index: -1;
   border-radius: 5px;
@@ -393,9 +394,11 @@ footer {
 
 .navb a:hover:before {
   transition: transform 0.5s;
-  transform-origin: bottom;
+  transform-origin: left;
   transform: scaleX(3);
 }
+
+/* contact me section */
 
 .contact {
   align-items: flex-start;
@@ -412,6 +415,8 @@ footer {
   color: var(--navyblue);
   border-bottom: 5px solid var(--navyblue);
 }
+
+/* dynamic adjustments for screen size */
 
 @media screen and (max-width: 1500px) {
   h1 {
